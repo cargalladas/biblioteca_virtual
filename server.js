@@ -1,7 +1,7 @@
 // importar
 var express = require('express');
 var iniciador = require('./servidor/src/iniciador.js');
-var prueba = require('./servidor/src/prueba.js');
+var dao = require('./servidor/src/usuariosDAO/usuariosDAO.js');
  
 // instanciar
 var app = express();
@@ -12,5 +12,3 @@ app.get('/', function(req, res){
 });
 
 iniciador.init(app);
- 
-console.log("Servidor Express escoitando en modo %s", app.settings.env);
