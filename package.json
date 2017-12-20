@@ -4,6 +4,6 @@
   "version": "1.0.0",
   "dependencies": {
     "express": "3.x",
-    "require": "^2.4.20"
+    "pg-promise": "^7.3.2"
   }
 }
