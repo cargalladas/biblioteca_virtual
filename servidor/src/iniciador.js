@@ -1,8 +1,14 @@
 var baseDatos = require('./baseDatos.js')
 
 function init(app){
-    app.listen(80);
-    console.log("Servidor escoitando en modo %s", app.settings.env);
+    var port = 8080;
+    for(var i in process.argv){
+        if(process.argv[i] == '--port' && parseInt(process.argv[parseInt(i) + 1])){
+            port = parseInt(process.argv[parseInt(i) + 1]);
+        }
+    }
+    app.listen(port);
+    console.log("Servidor escoitando no porto %s", port);
 
 }
 

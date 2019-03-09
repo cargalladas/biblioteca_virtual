@@ -3,7 +3,9 @@
   "description": "Servidor web de prueba",
   "version": "1.0.0",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "3.x",
+    "path": "^0.12.7",
     "pg-promise": "^7.3.2"
   }
 }

@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Biblioteca Virtual | Login</title>
+
+        <!-- Librerías CSS importadas -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+        <link rel='stylesheet' href="/libs/Material Components Web 1.0.0/material-components-web.min.css">
+   
+        <!-- Scrips de CSS propios -->
+        <link rel='stylesheet' href="/cliente/publico/css/biblioteca.css">     
+        <link rel="stylesheet" href="/cliente/publico/css/login.css">
+    </head>
+    <body class="mdc-typography">
+        <div class="bv-layout">
+            <h1 class="mdc-typography--headline1 bv-titulo"><b>Biblio</b>teca</h1>
+            <div class="mdc-card bv-tarxeta">
+                <div>
+                    <h2 class="mdc-typography mdc-typography--headline6 bv-tarxeta-titulo">Iniciar sesión</h2>
+                    <div class="mdc-typography mdc-typography--body2 bv-tarxeta-contido">
+                        <div id="bv-tf-nome-usuario" class="mdc-text-field mdc-text-field--outlined bv-tarxeta-text-field">
+                            <input class="mdc-text-field__input">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label class="mdc-floating-label">Nome de usuario</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                        <div id="bv-tf-contrasinal" class="mdc-text-field mdc-text-field--outlined bv-tarxeta-text-field">
+                            <input type='password' class="mdc-text-field__input">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label class="mdc-floating-label">Contrasinal</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdc-card__actions bv-tarxeta-actions">
+                    <div class="mdc-card__action-buttons">
+                        <button class="mdc-button mdc-card__action mdc-card__action--button">Registrarse</button>
+                        <button class="mdc-button mdc-card__action mdc-card__action--button">Entrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Librerias JavaScript importadas -->
+        <script src='/libs/Material Components Web 1.0.0/material-components-web.js'></script>
+    
+        <!-- Scrips propios de JavaScript -->
+        <script src="/cliente/publico/js/login.js"></script>
+
+        <script>
+            (function (){
+                var login = new Login();              
+                login.init();
+            })()
+        </script>
+    </body>
+</html>
