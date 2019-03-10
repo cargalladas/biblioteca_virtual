@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>Biblioteca Virtual | Login</title>
+
+        <!-- Librerías CSS importadas -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+        <link rel='stylesheet' href="/libs/Material Components Web 1.0.0/material-components-web.min.css">
+        <link rel="stylesheet" href="/libs/bootstrap-material-datetimepicker-2.7.1/css/bootstrap-material-datetimepicker.css">
+
+        <!-- Modificacións sobre as librerías de CSS externas -->
+        <link rel="stylesheet" href="/libs/modificacions/material-components-web.css">
+
+        <!-- Scrips de CSS propios -->
+        <link rel='stylesheet' href="/cliente/publico/css/biblioteca.css">
+        <link rel="stylesheet" href="/cliente/publico/css/formulario.css">
+        <link rel="stylesheet" href="/cliente/publico/css/rexistro.css">
+    </head>
+    <body class="mdc-typography">
+        <div class="bv-layout">
+            <h1 class="mdc-typography--headline3 bv-titulo"><b>Biblio</b>teca</h1>
+            <div class="mdc-card bv-tarxeta">
+                <div>
+                    <h2 class="mdc-typography mdc-typography--headline6 bv-tarxeta-titulo bv-subtitulo">Rexistro de usuario</h2>
+                    <div class="mdc-typography mdc-typography--body2 bv-tarxeta-contido">
+                        <div id="bv-tf-nome-usuario" class="mdc-text-field mdc-text-field--outlined bv-tarxeta-text-field">
+                            <input class="mdc-text-field__input">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label class="mdc-floating-label">Nome de usuario</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                        <div id="bv-tf-contrasinal" class="mdc-text-field mdc-text-field--outlined bv-tarxeta-text-field">
+                            <input type='password' class="mdc-text-field__input">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label class="mdc-floating-label">Contrasinal</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                        <div id="bv-tf-contrasinal-rep" class="mdc-text-field mdc-text-field--outlined bv-tarxeta-text-field">
+                            <input type='password' class="mdc-text-field__input">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label class="mdc-floating-label">Repetir contrasinal</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                        <div id="bv-tf-nome" class="mdc-text-field mdc-text-field--outlined bv-tarxeta-text-field">
+                            <input class="mdc-text-field__input">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label class="mdc-floating-label">Nome</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                        <div id="bv-tf-apelidos" class="mdc-text-field mdc-text-field--outlined bv-tarxeta-text-field">
+                            <input class="mdc-text-field__input">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label class="mdc-floating-label">Apelidos</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                        <div id="bv-tf-data-nacemento" class="mdc-text-field mdc-text-field--outlined bv-tarxeta-text-field">
+                            <input class="mdc-text-field__input">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label class="mdc-floating-label">Data de nacemento</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                        <div id="bv-tf-direccion" class="mdc-text-field mdc-text-field--outlined bv-tarxeta-text-field">
+                            <input class="mdc-text-field__input">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label class="mdc-floating-label">Dirección</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                        <div id="bv-tf-dni" class="mdc-text-field mdc-text-field--outlined bv-tarxeta-text-field">
+                            <input class="mdc-text-field__input">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label class="mdc-floating-label">DNI</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                        <div id="bv-tf-email" class="mdc-text-field mdc-text-field--outlined bv-tarxeta-text-field">
+                            <input type='email' class="mdc-text-field__input">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label class="mdc-floating-label">E-mail</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                        <div id="bv-tf-telefono" class="mdc-text-field mdc-text-field--outlined bv-tarxeta-text-field">
+                            <input class="mdc-text-field__input">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label class="mdc-floating-label">Teléfono</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdc-card__actions bv-tarxeta-actions">
+                    <div class="mdc-card__action-buttons">
+                        <button id="bv-btn-in" class="mdc-button mdc-card__action mdc-card__action--button">Entrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Librerias JavaScript importadas -->
+        <!-- Frameworks -->
+        <script src="/libs/jQuery 3.3.1/jquery-3.3.1.min.js"></script>
+        <script src="/libs/Moment.js 2.24.0/moment-with-locales.js"></script>
+
+        <!-- Estilo -->
+        <script src='/libs/Material Components Web 1.0.0/material-components-web.js'></script>
+        <script src="/libs/bootstrap-material-datetimepicker-2.7.1/js/bootstrap-material-datetimepicker.js"></script>
+
+        <!-- Scrips propios de JavaScript -->
+        <script src="/cliente/publico/js/rexistro.js"></script>
+
+        <script>
+            (function (){
+                var rexistro = new Rexistro();              
+                rexistro.init();
+            })()
+        </script>
+    </body>
+</html>

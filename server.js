@@ -19,7 +19,11 @@ app.get('/', function(req, res){
 });
 
 app.get('/login', function(req, res){
-  res.render('login.html')
+  res.render('login.html');
 });
+
+app.get('/rexistro', function(req, res){
+  res.render('rexistro.html');
+})
 
 iniciador.init(app);

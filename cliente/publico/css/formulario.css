@@ -1,0 +1,35 @@
+.bv-tarxeta{
+    width: 350px;
+    margin: auto;
+}
+
+.bv-tarxeta-titulo{
+    padding: 0 20px;
+}
+
+.bv-tarxeta-contido{
+    padding: 10px 20px;
+}
+
+.bv-tarxeta-text-field{
+    width: 100%;
+    margin-bottom: 10px
+}
+
+.bv-tarxeta-text-field:last-child{
+    margin-bottom: 0;
+}
+
+.bv-tarxeta-actions{
+    padding: 0;
+}
+
+.bv-tarxeta-actions > div {
+    padding: 0 20px;
+    width: 100%;
+    display: block;
+}
+
+.bv-tarxeta-actions > div > button:last-child{
+    float: right;
+}

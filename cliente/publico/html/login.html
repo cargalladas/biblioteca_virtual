@@ -6,8 +6,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
         <link rel='stylesheet' href="/libs/Material Components Web 1.0.0/material-components-web.min.css">
    
+        <!-- Modificacións sobre as librerías de CSS externas -->
+        <link rel="stylesheet" href="/libs/modificacions/material-components-web.css">
+
         <!-- Scrips de CSS propios -->
         <link rel='stylesheet' href="/cliente/publico/css/biblioteca.css">     
+        <link rel="stylesheet" href="/cliente/publico/css/formulario.css">
         <link rel="stylesheet" href="/cliente/publico/css/login.css">
     </head>
     <body class="mdc-typography">
@@ -15,7 +19,7 @@
             <h1 class="mdc-typography--headline1 bv-titulo"><b>Biblio</b>teca</h1>
             <div class="mdc-card bv-tarxeta">
                 <div>
-                    <h2 class="mdc-typography mdc-typography--headline6 bv-tarxeta-titulo">Iniciar sesión</h2>
+                    <h2 class="mdc-typography mdc-typography--headline6 bv-tarxeta-titulo bv-subtitulo">Iniciar sesión</h2>
                     <div class="mdc-typography mdc-typography--body2 bv-tarxeta-contido">
                         <div id="bv-tf-nome-usuario" class="mdc-text-field mdc-text-field--outlined bv-tarxeta-text-field">
                             <input class="mdc-text-field__input">
@@ -41,14 +45,18 @@
                 </div>
                 <div class="mdc-card__actions bv-tarxeta-actions">
                     <div class="mdc-card__action-buttons">
-                        <button class="mdc-button mdc-card__action mdc-card__action--button">Registrarse</button>
-                        <button class="mdc-button mdc-card__action mdc-card__action--button">Entrar</button>
+                        <button id="bv-btn-rex" class="mdc-button mdc-card__action mdc-card__action--button">Rexistro</button>
+                        <button id="bv-btn-in" class="mdc-button mdc-card__action mdc-card__action--button">Entrar</button>
                     </div>
                 </div>
             </div>
         </div>
         
         <!-- Librerias JavaScript importadas -->
+        <!-- Frameworks -->
+        <script src="/libs/jQuery 3.3.1/jquery-3.3.1.min.js"></script>
+
+        <!-- Estilo -->
         <script src='/libs/Material Components Web 1.0.0/material-components-web.js'></script>
     
         <!-- Scrips propios de JavaScript -->
