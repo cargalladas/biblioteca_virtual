@@ -2,23 +2,21 @@
  * Clase que xestiona a pantalla de inicio de sesión
  * @version 0.1
  * @author Carlos Llegaspi
- * @access public
  */
-export class Login {
+class Login {
     constructor() {
         /**
-         * @type {object}
+         * @type {object} 
          */
         this.btnRexistro = document.getElementById('bv-btn-rex');
         /**
-         * @type {object}
+         * @type {object} 
          */
         this.btnIn = document.getElementById('bv-btn-in');
     };
 
     /**
      * Metodo para iniciar a clase
-     * @abstract
      */
     init() {
         this.initTextFields();
@@ -27,7 +25,6 @@ export class Login {
 
     /**
      * Metodo para poñer en funcionamento os campos de texto da pantalla
-     * @abstract
      * @see https://material.io/develop/web/components/input-controls/text-field/
      */
     initTextFields() {
@@ -37,8 +34,7 @@ export class Login {
 
     /**
      * Metodo para iniciar os listeners dos botóns da pantalla
-     * @abstract
-     * @listens {click} No boton do rexitro
+     * @listens click No boton do rexitro
      */
     initLisntersBtns() {
         this.btnRexistro.addEventListener('click', () => {

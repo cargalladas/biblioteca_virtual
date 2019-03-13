@@ -1,3 +1,20 @@
 .bv-titulo{
     text-align: center;
 }
+
+.bv-tarxeta{
+    width: 600px;
+}
+
+.bv-input-file{
+    display: none;
+}
+
+.bv-previsualizacion{
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.bv-previsualizacion > img {
+    max-width: 100%;
+}

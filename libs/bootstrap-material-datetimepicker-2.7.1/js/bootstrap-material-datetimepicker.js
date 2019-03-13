@@ -268,10 +268,10 @@
 										'</div>' +
 									'</div>' +
 									'<div class="dtp-buttons">' +
-										'<button class="dtp-btn-now btn btn-flat hidden">' + this.params.nowText + '</button>' +
-										'<button class="dtp-btn-clear btn btn-flat hidden">' + this.params.clearText + '</button>' +
-										'<button class="dtp-btn-cancel btn btn-flat">' + this.params.cancelText + '</button>' +
-										'<button class="dtp-btn-ok btn btn-flat">' + this.params.okText + '</button>' +
+										'<button class="dtp-btn-now btn btn-flat hidden mdc-button">' + this.params.nowText + '</button>' +
+										'<button class="dtp-btn-clear btn btn-flat hidden mdc-button">' + this.params.clearText + '</button>' +
+										'<button class="dtp-btn-cancel btn btn-flat mdc-button">' + this.params.cancelText + '</button>' +
+										'<button class="dtp-btn-ok btn btn-flat mdc-button">' + this.params.okText + '</button>' +
 										'<div class="clearfix"></div>' +
 									'</div>' +
 								'</div>' +
