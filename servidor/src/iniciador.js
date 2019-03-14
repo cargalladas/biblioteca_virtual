@@ -1,5 +1,3 @@
-var baseDatos = require('./baseDatos.js')
-
 function init(app){
     var port = 8080;
     for(var i in process.argv){
