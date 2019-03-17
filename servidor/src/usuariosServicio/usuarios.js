@@ -49,6 +49,47 @@ function rexitraUsuario(req, res) {
     });
 };
 
+function comprobaUsuario(req, res) {
+    let usuario = req.query.usuario;
+    let contrasinal = req.query.contrasinal;
+
+    usuariosDAO.getUsuarioPorNomeUsuario(usuario, (err, data) => {
+        if(err){
+            console.log(err)
+            res.status(500)
+                .json({
+                    status: 'error',
+                    message: 'Non se atopa ese usuario'
+                });
+        }else {
+            if(data){
+                if(bcrypt.compareSync(contrasinal, data.contrasinal)) {
+                    req.session.usuario = data;
+                    res.status(200)
+                        .json({
+                            status: 'success',
+                            data: data,
+                            message: 'O usuario e o contrasinal son correctos'
+                        })
+                } else {
+                    res.status(500)
+                        .json({
+                            status: 'error',
+                            message: 'O contrasinal non é correcto'
+                        });
+                }
+            } else {
+                res.status(500)
+                    .json({
+                        status: 'error',
+                        message: 'Non se atopa ese usuario'
+                    });
+            }
+        }   
+    });
+};
+
 module.exports = {
-    rexitraUsuario: rexitraUsuario
+    rexitraUsuario: rexitraUsuario,
+    comprobaUsuario: comprobaUsuario
 }

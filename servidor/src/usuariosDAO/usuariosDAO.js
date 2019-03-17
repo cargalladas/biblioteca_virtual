@@ -10,6 +10,17 @@ function rexistraUsuario(nomeUsuario, contrasinal, nome, apelidos, dataNacemento
         });
 };
 
+function getUsuarioPorNomeUsuario(usuario, fn) {
+    db.oneOrNone('select * from biblioteca.usuarios where nomeusuario = $1', usuario)
+        .then( data => {
+            fn(null, data);
+        })
+        .catch( err =>{
+            fn(err);
+        });
+};
+
 module.exports = {
-    rexistraUsuario: rexistraUsuario
+    rexistraUsuario: rexistraUsuario,
+    getUsuarioPorNomeUsuario: getUsuarioPorNomeUsuario
 }

@@ -7,7 +7,6 @@ function init(app){
     }
     app.listen(port);
     console.log("Servidor escoitando no porto %s", port);
-
 }
 
 module.exports = {

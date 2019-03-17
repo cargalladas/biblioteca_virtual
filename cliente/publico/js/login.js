@@ -5,13 +5,7 @@
  */
 class Login {
     constructor() {
-        /**
-         * @type {object} 
-         */
         this.btnRexistro = document.getElementById('bv-btn-rex');
-        /**
-         * @type {object} 
-         */
         this.btnIn = document.getElementById('bv-btn-in');
     };
 
@@ -39,6 +33,23 @@ class Login {
     initLisntersBtns() {
         this.btnRexistro.addEventListener('click', () => {
             location.href = '/rexistro';
+        });
+        this.btnIn.addEventListener('click', () => {
+            $.ajax({
+                type: 'get',
+                url: '/entrar',
+                data: {
+                    usuario: document.querySelector('#bv-tf-nome-usuario > input').value,
+                    contrasinal: document.querySelector('#bv-tf-contrasinal > input').value
+                },
+                success: () => {
+                    location.href = '/index'
+                },
+                error: (error) => {
+                    console.log(error);
+                    $('.bv-usuario-invalido').show();
+                }        
+            })
         });
     };
 };

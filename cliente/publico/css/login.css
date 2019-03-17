@@ -1,3 +1,8 @@
 .bv-titulo{
     text-align: center;
 }
+
+.bv-usuario-invalido{
+    color: red;
+    display: none;
+}
