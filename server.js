@@ -4,7 +4,7 @@ var session = require('express-session');
 var iniciador = require('./servidor/src/iniciador.js');
 var path = require('path')
 var multer = require('multer');
-var upload = multer({dest: './tmp'})
+var upload = multer({ dest: './tmp' })
 
 var app = express();
 
@@ -12,18 +12,18 @@ var app = express();
 const xestorUsuarios = require('./servidor/src/usuariosServicio/usuarios.js');
 
 // Guardar sesión
-app.use( session( {
+app.use(session({
   secret: 'Esta ben oh',
   cookie: {
-    path: '/', 
+    path: '/',
     httpOnly: true,
     secure: false,
-    maxAge: 24*60*60*1000
-   }
+    maxAge: 24 * 60 * 60 * 1000
+  }
 }));
 
 let restrinxido = (req, res, next) => {
-  if(req.session.usuario && (req.session.usuario.rol == 0 || req.session.usuario.rol == 1)) {
+  if (req.session.usuario && (req.session.usuario.rol == 0 || req.session.usuario.rol == 1)) {
     return next();
   } else {
     return res.render('404.html');
@@ -31,7 +31,7 @@ let restrinxido = (req, res, next) => {
 }
 
 let restrinxidoAdministrador = (req, res, next) => {
-  if(req.session.usuario && (req.session.usuario.rol == 0)) {
+  if (req.session.usuario && (req.session.usuario.rol == 0)) {
     return next();
   } else {
     return res.render('404.html');
@@ -54,21 +54,33 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
 // ruteo
-app.get('/', function(req, res){
+app.get('/', function (req, res) {
   res.render('login.html');
 });
 
-app.get('/login', function(req, res){  
+app.get('/login', function (req, res) {
   res.render('login.html');
 });
 
-app.get('/rexistro', function(req, res){
+app.get('/rexistro', function (req, res) {
   res.render('rexistro.html');
+});
+
+app.get('/logout', restrinxido, (req, res) => {
+  req.session.destroy(err => {
+    if (!err) {
+      res.render('login.html');
+    }
+  })
 });
 
 app.get('/index', restrinxido, (req, res) => {
   res.render('index.html');
 });
+
+app.get('/administracion', restrinxidoAdministrador, (req, res) => {
+  res.render('administracion.html', { usuario: req.session.usuario })
+})
 
 app.get('/entrar', xestorUsuarios.comprobaUsuario)
 

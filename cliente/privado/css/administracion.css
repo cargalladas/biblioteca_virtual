@@ -1,0 +1,26 @@
+.bv-cabeceira{
+    position: fixed;
+    top: 0;
+    width: calc(100% - 255px);
+    left: 255px;
+}
+
+.bv-contenedor-central{
+    position: fixed;
+    top: 64px;
+    left: 255px;
+    width: calc(100% - 255px);
+    height: calc(100% - 64px);
+}
+
+.bv-contenedor-categoria{
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    padding: 20px;
+    display: none; 
+}
+
+.bv-contenedor-activo{
+    display: block;
+}

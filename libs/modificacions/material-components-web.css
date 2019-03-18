@@ -10,3 +10,23 @@
 .mdc-button::before, .mdc-button::after {
     background-color: var(--mdc-theme-primary, #335c29);
 }
+
+.mdc-drawer .mdc-list-item--activated {
+    color: #738f5c;
+}
+
+.mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic{
+    color: #738f5c;
+}
+
+:not(.mdc-list--non-interactive)>:not(.mdc-list-item--disabled).mdc-list-item--activated::before, :not(.mdc-list--non-interactive)>:not(.mdc-list-item--disabled).mdc-list-item--activated::after {
+    background-color: var(--mdc-theme-primary, #738f5c);
+}
+
+.mdc-list-divider{
+    border: inset;
+    border-top: 1px solid rgba(0,0,0,.12);
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+}

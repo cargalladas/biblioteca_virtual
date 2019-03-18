@@ -1,1 +1,98 @@
-Administración
+<html>
+    <head>
+        <title>Biblioteca Virtual | Administración</title>
+
+        <!-- Librerías CSS importadas -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel='stylesheet' href="/libs/Material Components Web 1.0.0/material-components-web.min.css">
+   
+        <!-- Modificacións sobre as librerías de CSS externas -->
+        <link rel="stylesheet" href="/libs/modificacions/material-components-web.css">
+
+        <!-- Scrips de CSS propios -->
+        <link rel='stylesheet' href="/cliente/publico/css/biblioteca.css">     
+        <link rel="stylesheet" href="/cliente/publico/css/formulario.css">
+        <link rel="stylesheet" href="/cliente/privado/css/administracion.css">
+    </head>
+    <body class="mdc-typography">
+        <div class="bv-layout">
+            <header class="mdc-top-app-bar bv-cabeceira">
+                <div class="mdc-top-app-bar__row">
+                    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                        <span class="mdc-top-app-bar__title"><b>Biblio</b>teca | Administración</span>
+                    </section>
+                </div>
+            </header>
+            <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
+                <div class="mdc-drawer__header">
+                    <h3 id="bv-nome" class="mdc-drawer__title"></h3>
+                    <h6 id="bv-nome-usuario" class="mdc-drawer__subtitle"></h6>
+                </div>
+                <div class="mdc-drawer__content">
+                    <nav class="mdc-list">
+                        <a id="bv-btn-libros" class="mdc-list-item mdc-list-item--activated" aria-current="page">
+                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
+                            <span class="mdc-list-item__text">Libros</span>
+                        </a>
+                        <a id="bv-btn-autores" class="mdc-list-item">
+                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
+                            <span class="mdc-list-item__text">Autores</span>
+                        </a>
+                        <a id="bv-btn-editoriais" class="mdc-list-item">
+                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">edit</i>
+                            <span class="mdc-list-item__text">Editoriais</span>
+                        </a>
+                        <a id="bv-btn-xeneros" class="mdc-list-item">
+                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">list_alt</i>
+                            <span class="mdc-list-item__text">Xéneros</span>
+                        </a>
+                        <a id="bv-btn-idiomas" class="mdc-list-item">
+                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">language</i>
+                            <span class="mdc-list-item__text">Idiomas</span>
+                        </a>
+                        <hr class="mdc-list-divider"></hr>
+                        <a id="bv-btn-usuarios" class="mdc-list-item">
+                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">group</i>
+                            <span class="mdc-list-item__text">Usuarios</span>
+                        </a>
+                        <hr class="mdc-list-divider"></hr>
+                        <a class="mdc-list-item" href="/logout">
+                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">exit_to_app</i>
+                            <span class="mdc-list-item__text">Pechar sesión</span>
+                        </a>
+                    </nav>
+                </div>
+            </aside>
+            <div class="bv-contenedor-central">
+                <div id="bv-libros" class="bv-contenedor-categoria bv-contenedor-activo"></div>
+                <div id="bv-autores" class="bv-contenedor-categoria"></div>
+                <div id="bv-editoriais" class="bv-contenedor-categoria"></div>
+                <div id="bv-xeneros" class="bv-contenedor-categoria"></div>
+                <div id="bv-idiomas" class="bv-contenedor-categoria"></div> 
+                <div id="bv-usuarios"class="bv-contenedor-categoria"></div>                                
+            </div>
+        </div>
+        
+        <!-- Librerias JavaScript importadas -->
+        <!-- Frameworks -->
+        <script src="/libs/jQuery 3.3.1/jquery-3.3.1.min.js"></script>
+        <script src="/libs/Moment.js 2.24.0/moment-with-locales.js"></script>
+
+        <!-- Estilo -->
+        <script src='/libs/Material Components Web 1.0.0/material-components-web.js'></script>
+        <script src="/libs/bootstrap-material-datetimepicker-2.7.1/js/bootstrap-material-datetimepicker.js"></script>
+
+        <!-- Scrips propios de JavaScript -->
+        <script src="/cliente/usuario/js/Usuario.js"></script>
+        <script src="/cliente/privado/js/Administracion.js"></script>
+
+        <script>
+            (function (){
+                let user = <%- JSON.stringify(usuario) %>;
+                let usuarioAdmin = new Usuario(user);
+                let admin = new Administracion(usuarioAdmin).init();
+            })()
+        </script>
+    </body>
+</html>
